@@ -1,4 +1,5 @@
 <?php include '_header.php' ?>
+<?php include 'config.php' ?>
 
     <div class="jumbotron jumbotron-fluid py-4">
         <div class="container">
