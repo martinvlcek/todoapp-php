@@ -27,8 +27,9 @@
             <div class="col-md-6 order-0 order-md-1 input-new-todo">
                 <form action="add-new-todo.php" method="post">
                     <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Write your new todo..."></textarea>
+                        <textarea class="form-control" name="new-todo" rows="4" placeholder="Write your new todo..."></textarea>
                     </div>
+                    <input type="submit" class="btn btn-primary" name="submit-btn" value="Pridat">
                 </form>
             </div>
         </div>
