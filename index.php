@@ -19,7 +19,10 @@
             <div class="col-md-6 order-1 order-md-0 mt-4 mt-md-0 todo-list">
                 <ul class="list-group">
                     <?php foreach ($all_todos as $todo) : ?>
-                        <li class="list-group-item"><?= $todo['todo_text'] ?></li>
+                        <li class="list-group-item"><?= $todo['todo_text'] ?>
+                            <a href="edit-todo.php?id=<?= $todo['id'] ?>"><i class="fas fa-edit"></i></a>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
