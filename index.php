@@ -10,7 +10,7 @@
 
     <div class="jumbotron jumbotron-fluid py-4">
         <div class="container">
-            <h1 class="display-4">Todo App</h1>
+            <h1 class="display-4"><a href="/">Todo App</a></h1>
         </div>
     </div>
 
@@ -20,19 +20,20 @@
                 <ul class="list-group">
                     <?php foreach ($all_todos as $todo) : ?>
                         <li class="list-group-item"><?= $todo['todo_text'] ?>
-                            <a href="edit-todo.php?id=<?= $todo['id'] ?>"><i class="fas fa-edit"></i></a>
-                            <a href="delete-todo.php?id=<?= $todo['id'] ?>"><i class="fas fa-trash-alt"></i></a>
+                            <div class="d-block text-right">
+                                <a href="edit-todo.php?id=<?= $todo['id'] ?>"><i class="text-success fas fa-edit"></i></a>
+                                <a href="delete-todo.php?id=<?= $todo['id'] ?>"><i class="text-danger fas fa-trash-alt"></i></a>
+                            </div>
                         </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
 
             <div class="col-md-6 order-0 order-md-1 input-new-todo">
-                <form action="add-new-todo.php" method="post">
+                <form action="add-todo.php" method="post" id="main-form">
                     <div class="form-group">
-                        <textarea class="form-control" name="new-todo" rows="4" placeholder="Write your new todo..."></textarea>
+                        <textarea class="form-control" id="add-new-todo" name="add-todo" rows="4" placeholder="Write your new todo..." autofocus></textarea>
                     </div>
-                    <input type="submit" class="btn btn-primary" name="submit-btn" value="Pridat">
                 </form>
             </div>
         </div>

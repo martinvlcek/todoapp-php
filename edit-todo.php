@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <textarea class="form-control" name="edited-todo" rows="4"><?= $current_todo['todo_text'] ?></textarea>
                     </div>
-                    <input type="submit" class="btn btn-primary" name="edit-todo-btn" value="Edit">
+                    <input type="submit" class="btn btn-success" name="edit-todo-btn" value="Edit">
                     <input type="submit" class="btn btn-secondary" name="back-btn" value="Back">
                 </form>
             </div>

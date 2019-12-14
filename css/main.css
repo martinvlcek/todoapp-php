@@ -1,3 +1,8 @@
-footer a:hover {
+h1 a {
+    color: #000;
+}
+
+a:hover {
     text-decoration: none;
+    color: #000;
 }
