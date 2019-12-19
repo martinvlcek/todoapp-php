@@ -35,7 +35,7 @@
                     <div class="form-group">
                         <textarea class="form-control" name="deleted-todo" rows="4" disabled> <?= $current_todo['todo_text'] ?></textarea>
                     </div>
-                    <input type="submit" class="btn btn-danger" name="delete-todo-btn" value="Delete">
+                    <input type="submit" class="btn btn-danger delete-todo" name="delete-todo-btn" value="Delete">
                     <input type="submit" class="btn btn-secondary" name="back-btn" value="Back">
                 </form>
             </div>

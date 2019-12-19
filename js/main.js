@@ -40,4 +40,8 @@
         newTodoInput.val('').focus();
     });
 
+    $('.delete-todo').on('click', function() {
+        if (!confirm('Are you sure?')) { return false };
+    })
+
 })(jQuery);
