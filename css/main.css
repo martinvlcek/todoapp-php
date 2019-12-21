@@ -6,3 +6,30 @@ a:hover {
     text-decoration: none;
     color: #000;
 }
+
+li {
+    overflow: hidden;
+}
+
+li:hover .action-icons {
+    opacity: 1;
+    right: 0;
+}
+
+.action-icons {
+    position: relative;
+    right: -5px;
+    opacity: 0.3;
+    float: right;
+    transition: all .2s ease-in-out;
+}
+
+footer a i:hover {
+    color: #fff !important;
+}
+
+.info-box {
+    display: none;
+}
+
+

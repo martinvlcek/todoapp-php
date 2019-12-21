@@ -1,6 +1,8 @@
 <?php
-    include 'config.php';
+
+    require 'config.php';
     include '_header.php';
+    session_start();
 
     $id = $_GET['id'];
     // get todo item from DB with current ID
@@ -11,6 +13,7 @@
         // update new todo to DB with current ID
         $query_set = $conn->query("DELETE FROM todo_list WHERE id = $id");
         if ($query_set) {
+            $_SESSION['message'] = 'Todo removed successfully!';
             header('Location: /');
             die();
         }

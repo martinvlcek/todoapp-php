@@ -1,6 +1,9 @@
 <?php
-    include 'config.php';
+
+    require 'config.php';
     include '_header.php';
+    session_start();
+
 
     $id = $_GET['id'];
     // get todo item from DB with current ID
@@ -12,6 +15,7 @@
         $edited_todo = $_POST['edited-todo'];
         $query_set = $conn->query("UPDATE todo_list SET todo_text = '$edited_todo' WHERE id = $id");
         if ($query_set) {
+            $_SESSION['message'] = 'Todo edited successfully!';
             header('Location: /');
             die();
         }
@@ -32,11 +36,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 order-0 order-md-1 input-edit-todo">
-                <form action="edit-todo.php?id=<?= $current_todo['id']?>" method="post">
+                <form action="edit-todo.php?id=<?= $current_todo['id']?>" id="edit-form" method="post">
                     <div class="form-group">
-                        <textarea class="form-control" name="edited-todo" rows="4"><?= $current_todo['todo_text'] ?></textarea>
+                        <textarea class="form-control" id="edit-todo" name="edited-todo" rows="4"><?= $current_todo['todo_text'] ?></textarea>
                     </div>
-                    <input type="submit" class="btn btn-success" name="edit-todo-btn" value="Edit">
+                    <input type="submit" class="btn btn-success edit-todo" name="edit-todo-btn" value="Edit">
                     <input type="submit" class="btn btn-secondary" name="back-btn" value="Back">
                 </form>
             </div>

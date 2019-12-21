@@ -1,7 +1,8 @@
-<?php include '_header.php' ?>
-<?php include 'config.php' ?>
-
 <?php
+
+    include '_header.php';
+    include 'config.php';
+    session_start();
 
     $query = $conn->query('SELECT * FROM todo_list');
     $all_todos = $query->fetchAll();
@@ -20,7 +21,7 @@
                 <ul class="list-group">
                     <?php foreach ($all_todos as $todo) : ?>
                         <li class="list-group-item"><?= $todo['todo_text'] ?>
-                            <div class="d-block text-right">
+                            <div class="action-icons">
                                 <a href="edit-todo.php?id=<?= $todo['id'] ?>"><i class="text-success fas fa-edit"></i></a>
                                 <a href="delete-todo.php?id=<?= $todo['id'] ?>"><i class="text-danger fas fa-trash-alt"></i></a>
                             </div>
@@ -35,6 +36,18 @@
                         <textarea class="form-control" id="add-new-todo" name="add-todo" rows="4" placeholder="Write your new todo..." autofocus></textarea>
                     </div>
                 </form>
+
+                <?php
+
+                    $info_message = (isset($_SESSION['message'])) ? $_SESSION['message'] . '<i class="ml-1 fas fa-check"></i>' : '';
+                    unset($_SESSION['message']);
+
+                ?>
+
+                <div class="alert alert-info info-box" role="alert">
+                    <?= $info_message ?>
+                </div>
+
             </div>
         </div>
     </div>

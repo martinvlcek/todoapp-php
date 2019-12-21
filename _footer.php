@@ -1,7 +1,7 @@
 <footer class="mt-5">
     <div class="container">
         <p class="text-secondary">Created by Martin Vlcek.
-            <a href="https://github.com/martinvlcek" target="_blank">
+            <a href="https://github.com/martinvlcek" class="ml-2" target="_blank">
                 <i class="text-secondary fab fa-github"></i>
             </a>
             <a href="mailto:martin.vlcek93@gmail.com">
