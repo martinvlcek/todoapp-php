@@ -4,7 +4,7 @@
     include 'config.php';
     session_start();
 
-    $query = $conn->query('SELECT * FROM todo_list');
+    $query = $conn->query('SELECT * FROM todo_list ORDER BY id DESC');
     $all_todos = $query->fetchAll();
 
 ?>

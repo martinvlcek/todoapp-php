@@ -30,11 +30,11 @@
                 $.ajax({
                     url: '/'
                 }).done(function(html) {
-                    let newTodo = $(html).find('li.list-group-item:last-child');
+                    let newTodo = $(html).find('li.list-group-item:first-child');
 
-                    newTodo.appendTo('.list-group')
+                    newTodo.prependTo('.list-group')
                         .hide()
-                        .fadeIn()
+                        .slideDown()
                         .css({backgroundColor: '#28a745'})
                         .animate({backgroundColor: '#fff'});
 
