@@ -36,7 +36,7 @@
             <div class="col-md-6 order-0 order-md-1 input-delete-todo">
                 <form action="delete-todo.php?id=<?= $current_todo['id']?>" method="post">
                     <div class="form-group">
-                        <textarea class="form-control" name="deleted-todo" rows="4" disabled> <?= $current_todo['todo_text'] ?></textarea>
+                        <textarea class="form-control" name="deleted-todo" id="delete-todo" rows="4" disabled> <?= $current_todo['todo_text'] ?></textarea>
                     </div>
                     <input type="submit" class="btn btn-danger delete-todo" name="delete-todo-btn" value="Delete">
                     <input type="submit" class="btn btn-secondary" name="back-btn" value="Back">

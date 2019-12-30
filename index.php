@@ -22,8 +22,8 @@
                     <?php foreach ($all_todos as $todo) : ?>
                         <li class="list-group-item"><?= $todo['todo_text'] ?>
                             <div class="action-icons">
-                                <a href="edit-todo.php?id=<?= $todo['id'] ?>"><i class="text-success fas fa-edit"></i></a>
-                                <a href="delete-todo.php?id=<?= $todo['id'] ?>"><i class="text-danger fas fa-trash-alt"></i></a>
+                                <a href="edit-todo.php?id=<?= $todo['id'] ?>" class="edit"><i class="text-success fas fa-edit"></i></a>
+                                <a href="delete-todo.php?id=<?= $todo['id'] ?>" class="delete"><i class="text-danger fas fa-trash-alt"></i></a>
                             </div>
                         </li>
                     <?php endforeach; ?>
